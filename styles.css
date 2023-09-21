@@ -25,17 +25,20 @@ body{
 
 /*This is the title containter page*/
 
-.title-container{
+.tile-container{
     text-align: center;
     width: 510px;
     border-bottom: solid 1px #3a3a3c;
 }
+
+/*This is the container*/
 
 .title-container{
     width: 330px;
     margin-bottom: 30px;
 }
 
+/*This is the key container*/
 .key-container{
     width: 510px;
     display: flex;
