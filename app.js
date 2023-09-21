@@ -31,5 +31,10 @@ const keys = [
     'B',
     'H',
     '<',
-
 ]
+
+keys.forEach (key => {
+    const buttonElement = document.createElement('button')
+    buttonElement.textContent = key
+    keyboard.append(buttonElement)
+})
