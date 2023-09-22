@@ -56,6 +56,15 @@ body{
     margin: 4px;
 }
 
+
+/*nth-button 11
+
+.key-container button:nth-child(12), {
+    margin-left: 30px;
+}
+*/
+
+/*nth-child for key container 20-28*/
 .key-container button:nth-child(20),
 .key-container button:nth-child(28) {
 
