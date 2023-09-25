@@ -13,6 +13,7 @@ body{
 
 }
 
+/*Game Container*/
 
 .game-container {
     height: 90vh;
@@ -23,7 +24,7 @@ body{
 }
 
 
-/*This is the title containter page*/
+/*This is the tile containter page*/
 
 .tile-container{
     text-align: center;
@@ -31,9 +32,9 @@ body{
     border-bottom: solid 1px #3a3a3c;
 }
 
-/*This is the container*/
+/*This is the container tile*/
 
-.title-container{
+.tile-container{
     width: 330px;
     margin-bottom: 30px;
 }
@@ -69,5 +70,23 @@ body{
 .key-container button:nth-child(28) {
 
     width: 68px;
+
+}
+
+.tile-container div {
+    display: flex;
+}
+
+
+/*title container tile*/
+.tile-container .tile{
+    width: 62px;
+    height: 62px;
+    border: 2px solid#3a3a3c;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
 
 }
