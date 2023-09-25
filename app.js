@@ -1,7 +1,11 @@
+
+/*Tile Display and Keyboard */
+
 const tileDisplay = document.querySelector('.tile-container')
 const keyboard = document.querySelector('.key-container')
 
 
+/*Added keyboard letters */
 const keys = [
 
     'Q',
@@ -34,6 +38,7 @@ const keys = [
     '<<',
 ]
  
+/*Guess Rows */
 
 const guessRows = [
 
@@ -48,6 +53,12 @@ const guessRows = [
 guessRows.forEach((guessRow,guessRowIndex) => {
     const rowElement = document.createElement('div')
     rowElement.setAttribute('id', 'guessRow-' + guessRowIndex)
+    guessRow.forEach((guess, guessIndex) =>{
+        const tileElement = document.createElement('div')
+        tileElement.setAttribute('id', 'guessRow-' +guessRowIndex + '-tile-' + guessIndex)
+        rowElement.append(tileElement)
+
+    })
 
     tileDisplay.append(rowElement)
 
@@ -55,10 +66,11 @@ guessRows.forEach((guessRow,guessRowIndex) => {
 
 
 
-
 const handleClick = ( ) => {
     console.log('Clicked')
 }
+
+/*Keys */
 
 keys.forEach (key => {
     const buttonElement = document.createElement('button')
