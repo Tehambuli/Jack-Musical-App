@@ -44,6 +44,15 @@ const guessRows = [
     ['', '', '','',],    
 ]  
 
+guessRows.forEach(guessRow,guessRowIndex => {
+    const rowElement = document.createElement('div')
+    rowElement.setAttribute('id', 'guessRow-' + guessRowIndex)
+
+})
+
+
+
+
 const handleClick = ( ) => {
     console.log('Clicked')
 }
