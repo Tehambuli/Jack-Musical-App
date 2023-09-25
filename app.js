@@ -66,6 +66,7 @@ guessRows.forEach((guessRow,guessRowIndex) => {
 })
 
 
+/**handleClick */
 
 const handleClick = ( ) => {
     console.log('Clicked')
