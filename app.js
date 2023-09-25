@@ -34,6 +34,16 @@ const keys = [
     '<<',
 ]
  
+
+const guessRows = [
+
+    ['', '', '','',],
+    ['', '', '','',],
+    ['', '', '','',],
+    ['', '', '','',],
+    ['', '', '','',],    
+]  
+
 const handleClick = ( ) => {
     console.log('Clicked')
 }
