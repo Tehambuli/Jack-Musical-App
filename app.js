@@ -100,4 +100,16 @@ keys.forEach (key => {
 
 const handleClick = (key ) => {
     console.log('Clicked', key)
+    addletter(key)
+}
+
+/**Added Letter */
+
+const addletter = (letter) => {
+  const tile =  document.getElementById('guessRow-' + currentRow + '-tile-' + currenttile)
+  tile.textContent = letter
+  guessRows[currentRow][currenttile] = letter
+  tile.setAttribute('data', letter)
+  currenttile++
+  console.log('guessRows' , guessRows)
 }
