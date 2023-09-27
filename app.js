@@ -5,12 +5,15 @@ const tileDisplay = document.querySelector('.tile-container')
 const keyboard = document.querySelector('.key-container')
 
 
-/**Jack Harlow's song Drip Drop */
+/**Jack Harlow's song "Drip Drop" */
 
-/**Jack Harlow's song What's Poppin Remix */
+/**Jack Harlow's song "What's Poppin Remix" */
 
-/** */
+/**Jack Harlow's song "Already Friends" */
 
+/**Jack Harlow's song "Heavy Hitter " */
+
+/**Jack Harlow's song "Tyler Herro" */
 
 
 
