@@ -18,13 +18,13 @@ const keyboard = document.querySelector('.key-container')
 
 
 /**Jack Harlow's song Denver */
-const keys = 'Denver'
+    const key = "Denver"
 
 
 
 
 /*Added keyboard letters */
-const keys = [
+    const keys = [
 
     'Q',
     'W',
@@ -68,7 +68,7 @@ const guessRows = [
 ]  
 
 let currentRow = 0
-let currenttile = 
+let currenttile = 0
 
 guessRows.forEach((guessRow,guessRowIndex) => {
     const rowElement = document.createElement('div')
