@@ -20,6 +20,9 @@ const keyboard = document.querySelector('.key-container')
 /**Jack Harlow's song Denver */
 const keys = 'Denver'
 
+
+
+
 /*Added keyboard letters */
 const keys = [
 
@@ -64,6 +67,8 @@ const guessRows = [
     ['', '', '','','','',],    
 ]  
 
+let currentRow = 0
+let currenttile = 
 
 guessRows.forEach((guessRow,guessRowIndex) => {
     const rowElement = document.createElement('div')
@@ -81,18 +86,18 @@ guessRows.forEach((guessRow,guessRowIndex) => {
 })
 
 
-/**handleClick */
-
-const handleClick = ( ) => {
-    console.log('Clicked')
-}
-
 /*Keys */
 
 keys.forEach (key => {
     const buttonElement = document.createElement('button')
     buttonElement.textContent = key
     buttonElement.setAttribute('id', key)
-    buttonElement.addEventListener('click', handleClick)
+    buttonElement.addEventListener('click', () => handleClick(key))
     keyboard.append(buttonElement)
 })
+
+/**handleClick */
+
+const handleClick = (key ) => {
+    console.log('Clicked', key)
+}
