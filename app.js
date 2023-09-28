@@ -105,7 +105,7 @@ keys.forEach (key => {
 const handleClick = (letter ) => {
     console.log('clicked', letter)
     if (letter ==='<<') {
-        console.log('delete letter')
+        deleteletter()
         return
     }
 
