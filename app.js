@@ -55,6 +55,8 @@ const keyboard = document.querySelector('.key-container')
     'N',
     '<<',
 ]
+
+
  
 /*Guess Rows */
 
@@ -86,6 +88,8 @@ guessRows.forEach((guessRow,guessRowIndex) => {
 })
 
 
+
+
 /*Keys */
 
 keys.forEach (key => {
@@ -96,20 +100,35 @@ keys.forEach (key => {
     keyboard.append(buttonElement)
 })
 
-/**handleClick */
+/**handleClick--named Keys or could be called letters */
 
-const handleClick = (key ) => {
-    console.log('Clicked', key)
-    addletter(key)
+const handleClick = (letter ) => {
+    console.log('clicked', letter)
+    if (letter ==='<<') {
+        console.log('delete letter')
+        return
+    }
+
+    if(letter === 'ENTER'){
+        console.log('check row')
+        return
+    }
+    addletter(letter)
 }
+
+
 
 /**Added Letter */
 
 const addletter = (letter) => {
-  const tile =  document.getElementById('guessRow-' + currentRow + '-tile-' + currenttile)
-  tile.textContent = letter
-  guessRows[currentRow][currenttile] = letter
-  tile.setAttribute('data', letter)
-  currenttile++
-  console.log('guessRows' , guessRows)
+
+if(currenttile <5 && currentRow <6) {
+    const tile =  document.getElementById('guessRow-' + currentRow + '-tile-' + currenttile)
+    tile.textContent = letter
+    guessRows[currentRow][currenttile] = letter
+    tile.setAttribute('data', letter)
+    currenttile++
+    console.log('guessRows' , guessRows)
+}
+
 }
