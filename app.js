@@ -145,7 +145,13 @@ const deleteletter = () => {
     tile.textContent = ''
     guessRows[currentRow][currenttile] =''
     tile.setAttribute('data', '')
+ 
 
+} 
 
+/**Constant Check Row */
+
+const checkRow =() => {
     
 }
+
