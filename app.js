@@ -154,10 +154,13 @@ const deleteletter = () => {
 /**Constant Check Row */
 
 const checkRow = () => {
-
+    const guess = guessRows[currentRow].join('')
     if (currenttile === 6){
-        const guess = guessRows[currentRow].join('')
-        console.log('guess is ' + guess, 'wordle is'  + wordle)
+       
+        console.log('guess is ' +  guess, 'wordle is'  +  wordle)
+        if(wordle == guess) {
+            showMessage('Excellent!')
+        }
     }
 }
 
