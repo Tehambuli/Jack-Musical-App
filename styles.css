@@ -95,7 +95,11 @@ body{
 
 /*Message Container*/
 
-p{
+.message-container{
+    height: 30px;
+}
+
+.message-container p{
     background-color: #818;
     border-radius: 10px;
     padding: 10px;

@@ -168,7 +168,7 @@ const checkRow = () => {
 //**Constant Message and Div with Youtube Video */
 
 const showMessage = (message) => {
-    const messageElement.createElement ('p')
+    const messageElement = document.createElement ('p')
     messageElement.textContent = message
     messageDisplay.append(messageElement)
 
