@@ -3,6 +3,7 @@
 
 const tileDisplay = document.querySelector('.tile-container')
 const keyboard = document.querySelector('.key-container')
+const messageDisplay = document.querySelector('.key-container')
 
 
 /**Jack Harlow's song "Drip Drop" */
@@ -164,3 +165,10 @@ const checkRow = () => {
     }
 }
 
+//**Constant Message and Div with Youtube Video */
+
+const showMessage = (message) => {
+    const messageElement.createElement('p')
+    messageElement.textContent = message
+
+}
