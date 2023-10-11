@@ -15,10 +15,12 @@ const keyboard = document.querySelector('.key-container')
 
 /**Jack Harlow's song "Tyler Herro" */
 
+/**Jack Harlow's song "Denver" */
+
 
 
 /**Jack Harlow's song Denver */
-    const key = "Denver"
+    const wordle = "Denver"
 
 
 
@@ -111,7 +113,7 @@ const handleClick = (letter ) => {
     }
 
     if(letter === 'ENTER'){
-        console.log('check row')
+       checkRow()
         console.log('guessRows, guessRows')
         return
     }
@@ -139,19 +141,23 @@ if(currenttile <6 && currentRow <7) {
 /**Delete Letter */
 
 const deleteletter = () => {
-    if(currenttile >0)
+    if(currenttile > 0) {
     currenttile--
     const tile =  document.getElementById('guessRow-' + currentRow + '-tile-' + currenttile)
     tile.textContent = ''
     guessRows[currentRow][currenttile] =''
     tile.setAttribute('data', '')
- 
+    }
 
 } 
 
 /**Constant Check Row */
 
-const checkRow =() => {
-    
+const checkRow = () => {
+
+    if (currenttile === 6){
+        const guess = guessRows[currentRow].join('')
+        console.log('guess is ' + guess, 'wordle is'  + wordle)
+    }
 }
 
