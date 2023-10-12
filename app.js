@@ -16,7 +16,10 @@ const messageDisplay = document.querySelector('.message-container')
 
 /**Jack Harlow's song "Tyler Herro" */
 
-/**Jack Harlow's song "Denver" */
+/**Jack Harlow's song "Denver" 
+ * 
+ * https://www.youtube.com/watch?v=vq4hRDnGbDY
+*/
 
 
 
@@ -166,6 +169,7 @@ const checkRow = () => {
 }
 
 //**Constant Message and Div with Youtube Video */
+/**Jack Harlow's Denver Youtube Video https://www.youtube.com/watch?v=vq4hRDnGbDY  */
 
 const showMessage = (message) => {
     const messageElement = document.createElement ('p')
