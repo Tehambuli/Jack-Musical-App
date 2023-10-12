@@ -24,13 +24,13 @@ const messageDisplay = document.querySelector('.message-container')
 
 
 /**Jack Harlow's song Denver */
-    const wordle = "Denver"
+const wordle =' "https://www.youtube.com/watch?v=vq4hRDnGbDY"'
 
 
 
 
 /*Added keyboard letters */
-    const keys = [
+const keys = [
 
     'Q',
     'W',
@@ -161,9 +161,9 @@ const checkRow = () => {
     const guess = guessRows[currentRow].join('')
     if (currenttile === 6){
        
-        console.log('guess is ' +  guess, 'wordle is'  +  wordle)
+        console.log('guess is ' +  guess, 'wordle is '  +  wordle)
         if(wordle == guess) {
-            showMessage('Excellent!')
+            showMessage('Denver Song!')
         }
     }
 }
