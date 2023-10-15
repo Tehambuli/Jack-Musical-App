@@ -159,7 +159,7 @@ const deleteletter = () => {
 
 const checkRow = () => {
     const guess = guessRows[currentRow].join('')
-    if (currenttile === 6){
+    if (currenttile === 6) {
        
         console.log('guess is ' +  guess, 'wordle is '  +  wordle)
         if(wordle == guess) {
