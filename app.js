@@ -33,6 +33,26 @@ const keys = [
     '«',
 ]
 
+const guessRow =[
+    ['', '', '', '', '', '', '','','','',''],
+    ['', '', '', '', '', '', '','','','',''],
+    ['', '', '', '', '', '', '','','','',''],
+    ['', '', '', '', '', '', '','','','',''],
+    ['', '', '', '', '', '', '','','','',''],
+    ['', '', '', '', '', '', '','','','',''],
+    ['', '', '', '', '', '', '','','','','']
+
+
+]
+
+guessRow.forEach(guessRow, => ){
+    const rowElement = document.createElement('div')
+    rowElement.setAttribute('id', 'guessRow-' + guessRowindex)
+}
+
+
+
+
 
 const handleClick = () => {
     console.log('clicked')
@@ -42,6 +62,8 @@ const handleClick = () => {
 keys.forEach(key => {
    const buttonElement = document.createElement('button')
    buttonElement.textContent = key
+   buttonElement.setAttribute('id', key)
+   buttonElement.addEventListener('click', handleClick)
    keyboard.append(buttonElement)
 
 
