@@ -24,7 +24,7 @@ const messageDisplay = document.querySelector('.message-container')
 
 
 /**Jack Harlow's song Denver */
-const wordle =' "https://www.youtube.com/watch?v=vq4hRDnGbDY"'
+const wordle = "Denver"
 
 
 
@@ -175,5 +175,4 @@ const showMessage = (message) => {
     const messageElement = document.createElement ('p')
     messageElement.textContent = message
     messageDisplay.append(messageElement)
-
 }
