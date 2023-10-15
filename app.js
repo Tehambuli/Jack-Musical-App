@@ -24,7 +24,7 @@ const messageDisplay = document.querySelector('.message-container')
 
 
 /**Jack Harlow's song Denver */
-const wordle = "Denver"
+const wordle = 'Denver'
 
 
 
@@ -83,7 +83,7 @@ guessRows.forEach((guessRow,guessRowIndex) => {
     rowElement.setAttribute('id', 'guessRow-' + guessRowIndex)
     guessRow.forEach((guess, guessIndex) =>{
         const tileElement = document.createElement('div')
-        tileElement.setAttribute('id', 'guessRow-' +guessRowIndex + '-tile-' + guessIndex)
+        tileElement.setAttribute('id', 'guessRow-' + guessRowIndex + '-tile-' + guessIndex)
         tileElement.classList.add('tile')
         rowElement.append(tileElement)
 
@@ -108,21 +108,21 @@ keys.forEach (key => {
 
 /**handleClick--named Keys or could be called letters */
 
-const handleClick = (letter ) => {
+const handleClick = (letter) => {
     console.log('clicked', letter)
     if (letter ==='<<') {
-        deleteletter()
-        console.log('guessRows, guessRows')
+        deletelettereleteletter()
+        console.log('guessRows', guessRows)
         return
     }
 
     if(letter === 'ENTER'){
-       checkRow()
-        console.log('guessRows, guessRows')
+        checkRow()
+        console.log('guessRows', guessRows)
         return
     }
     addletter(letter)
-    console.log('guessRows, guessRows')
+    console.log('guessRows', guessRows)
 }
 
 
@@ -131,7 +131,7 @@ const handleClick = (letter ) => {
 
 const addletter = (letter) => {
 
-if(currenttile <6 && currentRow <7) {
+if(currenttile < 7 && currentRow < 8) {
     const tile =  document.getElementById('guessRow-' + currentRow + '-tile-' + currenttile)
     tile.textContent = letter
     guessRows[currentRow][currenttile] = letter
@@ -163,7 +163,7 @@ const checkRow = () => {
        
         console.log('guess is ' +  guess, 'wordle is '  +  wordle)
         if(wordle == guess) {
-            showMessage('Denver Song!')
+            showMessage('Magnificient!')
         }
     }
 }
@@ -175,4 +175,5 @@ const showMessage = (message) => {
     const messageElement = document.createElement ('p')
     messageElement.textContent = message
     messageDisplay.append(messageElement)
+    setTimeout(() => messageDisplay.removeChild(messageElement), 2000)
 }
