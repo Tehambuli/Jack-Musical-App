@@ -5,3 +5,4 @@ I will have the guessed word go to Youtube video/s. I have 6 songs but I think i
 Not sure how to add the youtube videol links!
 
 I have cleaned out the code and I am restarting becasue I am too fucking dumb to get this right the first timne..,.I'M STARTING ALL OVET AGAIN! THE CODE HAS BEEN DELETED!
+I've have delete this again, because it is not working! I am going to start this code again!
