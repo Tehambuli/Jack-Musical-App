@@ -50,6 +50,7 @@ guessRow.forEach(guessRow, => ){
     rowElement.setAttribute('id', 'guessRow-' + guessRowindex)
 }
 
+    tileDisplay.append(rowElement)
 
 
 
