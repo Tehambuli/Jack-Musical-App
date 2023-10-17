@@ -33,7 +33,7 @@ const keys = [
     '«',
 ]
 
-const guessRow =[
+const guessRows =[
     ['', '', '', '', '', '', '','','','',''],
     ['', '', '', '', '', '', '','','','',''],
     ['', '', '', '', '', '', '','','','',''],
@@ -45,12 +45,18 @@ const guessRow =[
 
 ]
 
-guessRow.forEach(guessRow, => ){
+    guessRows.forEach((guessRow, guessRowIndex) => {
     const rowElement = document.createElement('div')
-    rowElement.setAttribute('id', 'guessRow-' + guessRowindex)
-}
+    rowElement.setAttribute('id', 'guessRow-' + guessRowIndex)
+    guessRow.forEach((guess, guessIndex) =>  {
+        const tileElement = document.createElement('div')
+        tileElement.setAttribute('id', 'guessRow-' + guessRowIndex + '-tile-' + guessIndex)
+        rowElement.append(tileElement)
+    })
 
     tileDisplay.append(rowElement)
+})
+
 
 
 
