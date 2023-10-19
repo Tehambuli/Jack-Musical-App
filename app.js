@@ -17,6 +17,14 @@ const keyboard = document.querySelector('.key-container')
  * 
  * 6. "Leaf Wraps"
  * 
+ * 7. "What's poppin"
+ * 
+ * 8. "Ghost"
+ * 
+ * 9. "Tyler Hero"
+ * 
+ * 10. "Sundown"
+ * 
  * 
  * 
  * 
