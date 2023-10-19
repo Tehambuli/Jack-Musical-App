@@ -3,6 +3,8 @@ const keyboard = document.querySelector('.key-container')
 
 
 
+
+
 /**Jack Harlow's Songs and video links for APP
  * 
  * 1. "Denver"
@@ -25,14 +27,11 @@ const keyboard = document.querySelector('.key-container')
  * 
  * 10. "Sundown"
  * 
- * 
- * 
- * 
- * 
  */
 
 
 
+const wordle ='Devner'
 
 
 const keys = [
@@ -95,16 +94,17 @@ const guessRows =[
 
 
 
-const handleClick = () => {
-    console.log('clicked')
+const handleClick = (key) => {
+     console.log('clicked', key)
 }
+
 
 
 keys.forEach(key => {
    const buttonElement = document.createElement('button')
    buttonElement.textContent = key
    buttonElement.setAttribute('id', key)
-   buttonElement.addEventListener('click', handleClick)
+   buttonElement.addEventListener('click',  () => handleClick(key))
    keyboard.append(buttonElement)
 
 
