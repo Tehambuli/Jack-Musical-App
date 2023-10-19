@@ -6,9 +6,14 @@
     'Lucida Sans', Arial, sans-serif;
 }
 
+
+/*body container*/
+
 body {
     background-color: #121213;
 }
+
+/*gamer container*/
 
 .game-container {
     height: 90vh;
@@ -18,16 +23,27 @@ body {
     align-items: center;
 }
 
+/*title container*/
+
+
 .title-container {
     text-align: center;
     width: 510px;
     border-bottom: solid 1px #3a3a3c;
 }
 
+
+
+
+/*tile container 1*/
+
 .tile-container {
     width: 330px;
     margin-bottom: 30px;
 }
+
+
+/*key container*/
 
 .key-container {
     width: 510px;
@@ -35,6 +51,8 @@ body {
     flex-wrap: wrap;
 }
 
+
+/*Key Container*/
 .key-container button {
     width: 43px;
     height: 58px;
@@ -54,6 +72,11 @@ body {
 .key-container button:nth-child(28) {
     width: 68px;
 }
+
+
+/*tile containe 2*/
+
+
 
 .tile-container.tile{
     width: 62px ;
