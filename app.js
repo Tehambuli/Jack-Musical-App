@@ -3,6 +3,27 @@ const keyboard = document.querySelector('.key-container')
 
 
 
+/**Jack Harlow's Songs and video links for APP
+ * 
+ * 1. "Denver"
+ * 
+ * 2. "Drip Drop"
+ * 
+ * 3. "Already Friends"
+ * 
+ * 4. "Heavy Hitter"
+ * 
+ * 5. "Thru the night"
+ * 
+ * 6. "Leaf Wraps"
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
+
+
 
 
 
