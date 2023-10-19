@@ -77,10 +77,14 @@ body {
 /*tile containe 2*/
 
 
+.tile-container div{
+    display: flex;
+}
 
-.tile-container.tile{
-    width: 62px ;
-    height: 62px;
+
+.tile-container .tile{
+    width: 72px ;
+    height: 42px;
     border: 2px solid #3a3a3c;
     box-sizing: border-box;
     display: flex;
