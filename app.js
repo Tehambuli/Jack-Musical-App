@@ -1,5 +1,6 @@
 const tileDisplay = document.querySelector('.tile-container')
 const keyboard = document.querySelector('.key-container')
+const messageDisplay = document.querySelector('.message-container')
 
 
 
@@ -31,7 +32,7 @@ const keyboard = document.querySelector('.key-container')
 
 
 
-const wordle ='Devner'
+const wordle = 'Devner'
 
 
 const keys = [
@@ -79,6 +80,7 @@ const guessRows =[
 
 let currentRow = 0
 let currentTile = 0
+let isGameOver = false
 
 
     guessRows.forEach((guessRow, guessRowIndex) => {
@@ -143,7 +145,7 @@ const addLetter = (letter) => {
 const deleteLetter =() =>   {
     if (currentTile > 0 ) {
         currentTile--
-        const tile = document.getElementById('guessRow-' + currentRow + '-tile-' + currentTile)
+        const tile = document.getElementById('guessRow-' + currentRow + '-tile-' + currentTile )
         tile.textContent = ''
         guessRows[currentRow][currentTile] = ''
         tile.setAttribute('data', '')
@@ -154,10 +156,41 @@ const deleteLetter =() =>   {
 
 
 const checkRow = () => {
-    if (currentTile === 6){
-        const guess = guessRows[currentRow].join('')
-        console.log('guess is' + guess, 'wordle is' + wordle)
+    const guess = guessRows[currentRow].join('')
+
+
+    if (currentTile === 7){
+        
+        console.log('guess is ' + guess, 'wordle  is '+ wordle)
+        if (wordle == guess){
+            showMessage ('Magnificent!')
+            isGameOver = true
+            return
+        } else{
+            if(currentRow >= 6){
+                isGameOver = false
+                showMessage('Game Over')
+                return
+            }
+
+            if (currentRow < 5) {
+                currentRow++
+                currentTile = 0
+            }
+
+        }
     }
 
+}
+
+
+const showMessage = (message) => {
+    const messageElement = document.createElement('p')
+    messageElement.textContent = message
+    messageDisplay.append(messageElement )
+    setTimeout(() => messageDisplay.removeChild(messageElement), 2000 )
+    
 
 }
+
+
