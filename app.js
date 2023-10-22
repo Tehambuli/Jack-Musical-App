@@ -97,13 +97,6 @@ let currentTile = 0
 
    
 
-
-const handleClick = (key) => {
-     console.log('clicked', key)
-}
-
-
-
 keys.forEach(key => {
    const buttonElement = document.createElement('button')
    buttonElement.textContent = key
@@ -114,3 +107,17 @@ keys.forEach(key => {
 
 })
 
+
+
+const handleClick = (key) => {
+    console.log( 'clicked', key)
+    addLetter(key)
+}
+
+
+const addLetter = (letter) => {
+    const tile = document.getElementById('guessRow-' + currentRow + '-tile-' + currentTile)
+    tile.textContent = letter
+
+
+}
