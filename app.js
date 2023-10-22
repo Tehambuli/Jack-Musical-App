@@ -118,6 +118,7 @@ const handleClick = (key) => {
 const addLetter = (letter) => {
     const tile = document.getElementById('guessRow-' + currentRow + '-tile-' + currentTile)
     tile.textContent = letter
+    currentTile++
 
 
 }
