@@ -117,7 +117,7 @@ const handleClick = (letter) => {
         return
     }
     if (letter === 'ENTER'){
-        console.log('Check row')
+        checkRow()
         console.log('guessRows', guessRows)
         return
     }
@@ -150,4 +150,14 @@ const deleteLetter =() =>   {
 
     }
    
+}
+
+
+const checkRow = () => {
+    if (currentTile === 6){
+        const guess = guessRows[currentRow].join('')
+        console.log('guess is' + guess, 'wordle is' + wordle)
+    }
+
+
 }
