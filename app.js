@@ -111,6 +111,7 @@ keys.forEach(key => {
 
 const handleClick = (key) => {
     console.log( 'clicked', key)
+    if (letter === '«')
     addLetter(key)
 }
 
