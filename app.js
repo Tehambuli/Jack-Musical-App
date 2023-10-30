@@ -162,6 +162,7 @@ const checkRow = () => {
     if (currentTile === 7){
         
         console.log('guess is ' + guess, 'wordle  is '+ wordle)
+        flipTile()
         if (wordle == guess){
             showMessage ('Magnificent!')
             isGameOver = true
@@ -195,22 +196,18 @@ const showMessage = (message) => {
 
 
 const flipTile = () => {
-    const rowTiles = document.querySelector('guessRow-' + currentRow).childNodes
+    const rowTiles = document.querySelector('#guessRow-' + currentRow).childNodes
     rowTiles.forEach((tile, index) => {
-            const dataLetter =  tile.getEAttribute('data')
+            const dataLetter = tile.getAttribute('data')
 
             if (dataLetter == wordle [index]) {
-                tile.classList.add('plum-overlay')
+                tile.classList.add('purple-overlay')
             } else if (wordle.includes(dataLetter)){
-            tile.classList.add('purple-overlay')
+            tile.classList.add('palevioletred-overlay')
             }else{
-                tile.classList.add('palevioletred')
+                tile.classList.add('plum')
             }
 
     })
-
-
-
-
 
 }
