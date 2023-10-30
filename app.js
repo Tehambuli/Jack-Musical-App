@@ -8,7 +8,7 @@ const messageDisplay = document.querySelector('.message-container')
 
 /**Jack Harlow's Songs and video links for APP
  * 
- * 1. "Denver"
+ * 1. "Denver" 
  * 
  * 2. "Drip Drop"
  * 
@@ -34,7 +34,7 @@ const messageDisplay = document.querySelector('.message-container')
 
 const wordle = 'Devner'
 
-
+/**These are the keys*/
 const keys = [
     'Q',
     'W',
