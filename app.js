@@ -8,25 +8,29 @@ const messageDisplay = document.querySelector('.message-container')
 
 /**Jack Harlow's Songs and video links for APP
  * 
- * 1. "Denver" 
+ * 1. "Denver" https://www.youtube.com/watch?v=vq4hRDnGbDY 
  * 
- * 2. "Drip Drop"
+ * 2. "Drip Drop" https://www.youtube.com/watch?v=4-SJyuCFD18
  * 
- * 3. "Already Friends"
+ * 3. "Already Friends" https://www.youtube.com/watch?v=kM-4va2nuYg 
  * 
- * 4. "Heavy Hitter"
  * 
- * 5. "Thru the night"
+ * 4. "Heavy Hitter" https://www.youtube.com/watch?v=BeFbMwLSszI 
  * 
- * 6. "Leaf Wraps"
+ * 5. "Thru the night"  https://www.youtube.com/watch?v=wPrEkA_gQp4 
  * 
- * 7. "What's poppin"
+ * 6. "Leaf Wraps" https://www.youtube.com/watch?v=CsLR0kBny4w 
  * 
- * 8. "Ghost"
  * 
- * 9. "Tyler Hero"
+ * 7. "What's poppin" https://www.youtube.com/watch?v=w9uWPBDHEKE 
  * 
- * 10. "Sundown"
+ * 8. "Ghost"  https://www.youtube.com/watch?v=GByTR0pBYWE
+ * 
+ * 
+ * 9. "Tyler Hero"  https://www.youtube.com/watch?v=np9Ub1LilKU 
+ * 
+ * 
+ * 10. "Sundown"  https://www.youtube.com/watch?v=N2-dqe8qweY   
  * 
  */
 
@@ -200,14 +204,17 @@ const flipTile = () => {
     rowTiles.forEach((tile, index) => {
             const dataLetter = tile.getAttribute('data')
 
+
+    setTimeout(() => {
             if (dataLetter == wordle [index]) {
-                tile.classList.add('purple-overlay')
-            } else if (wordle.includes(dataLetter)){
+                tile.classList.add('plum-overlay')
+            }   else if (wordle.includes(dataLetter)) {
             tile.classList.add('palevioletred-overlay')
-            }else{
-                tile.classList.add('plum')
+            }   else {
+                tile.classList.add('purple')
             }
 
-    })
+        }, 500 * index)
 
+    })
 }
