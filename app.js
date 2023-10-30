@@ -192,13 +192,21 @@ const showMessage = (message) => {
     
 }
 
+
+
 const flipTile = () => {
     const rowTiles = document.querySelector('guessRow-' + currentRow).childNodes
-    rowTiles.forEach(tile => {
-        tile.getEAttribute('data')
-        const dataLetter = tile  
+    rowTiles.forEach((tile, index) => {
+            const dataLetter =  tile.getEAttribute('data')
 
+            if (dataLetter == wordle [index]) {
+                tile.classList.add('green-overlay')
+            }
 
     })
-}
 
+
+
+
+
+}
