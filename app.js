@@ -200,7 +200,11 @@ const flipTile = () => {
             const dataLetter =  tile.getEAttribute('data')
 
             if (dataLetter == wordle [index]) {
-                tile.classList.add('green-overlay')
+                tile.classList.add('plum-overlay')
+            } else if (wordle.includes(dataLetter)){
+            tile.classList.add('purple-overlay')
+            }else{
+                tile.classList.add('palevioletred')
             }
 
     })
