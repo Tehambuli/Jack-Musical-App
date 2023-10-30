@@ -109,6 +109,21 @@ body {
     margin: 0;
 }
 
+/**Tile overlay color!**/
 
+.purple-overlay{
+    background-color: purple !important;
+    border: none !important;
+}
+
+.palevioletred-overlay{
+    background-color: palevioletred !important;
+    border: none !important;
+}
+
+.plum-overlay{
+    background-color: plum !important;
+    border: none !important;
+}
 
 
