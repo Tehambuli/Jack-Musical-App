@@ -167,13 +167,13 @@ const checkRow = () => {
             isGameOver = true
             return
         } else{
-            if(currentRow >= 6){
+            if(currentRow >= 7){
                 isGameOver = false
                 showMessage('Game Over')
                 return
             }
 
-            if (currentRow < 5) {
+            if (currentRow < 7) {
                 currentRow++
                 currentTile = 0
             }
@@ -190,7 +190,15 @@ const showMessage = (message) => {
     messageDisplay.append(messageElement )
     setTimeout(() => messageDisplay.removeChild(messageElement), 2000 )
     
-
 }
 
+const flipTile = () => {
+    const rowTiles = document.querySelector('guessRow-' + currentRow).childNodes
+    rowTiles.forEach(tile => {
+        tile.getEAttribute('data')
+        const dataLetter = tile  
+
+
+    })
+}
 

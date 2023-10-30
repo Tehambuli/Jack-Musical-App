@@ -9,3 +9,4 @@ I've have delete this again, because it is not working! I am going to start this
 
 This APP needs to done by the end of the week. I need to start working on revising my Python project for my personal portfolio!
 
+APP will be finished tomorrow and reviewed by mentor Jessamy!
