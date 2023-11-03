@@ -36,7 +36,7 @@ const messageDisplay = document.querySelector('.message-container')
 
 
 
-const wordle = 'Devner'
+const wordle = 'DENVER'
 
 /**These are the keys*/
 const keys = [
@@ -162,8 +162,8 @@ const deleteLetter =() =>   {
 const checkRow = () => {
     const guess = guessRows[currentRow].join('')
 
-
-    if (currentTile === 7){
+ /*
+    if (currentTile === 7){*/
         
         console.log('guess is ' + guess, 'wordle  is '+ wordle)
         flipTile()
@@ -184,7 +184,7 @@ const checkRow = () => {
             }
 
         }
-    }
+    // }
 
 }
 
@@ -193,7 +193,10 @@ const showMessage = (message) => {
     const messageElement = document.createElement('p')
     messageElement.textContent = message
     messageDisplay.append(messageElement )
-    setTimeout(() => messageDisplay.removeChild(messageElement), 2000 )
+    setTimeout(() => {
+        messageDisplay.removeChild(messageElement)
+        window.location.replace("https://www.youtube.com/watch?v=vq4hRDnGbDY")
+    }, 5000 )
     
 }
 
