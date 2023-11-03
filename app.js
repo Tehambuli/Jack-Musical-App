@@ -36,7 +36,19 @@ const messageDisplay = document.querySelector('.message-container')
 
 
 
+
+const songLookup = {
+    'DENVER': 'https://www.youtube.com/watch?v=vq4hRDnGbDY',
+    // Add the rest of the songs in the same format
+    // 'DRIP': ' https://www.youtube.com/watch?v=4-SJyuCFD18',
+    'GHOST': 'https://www.youtube.com/watch?v=GByTR0pBYWE',
+    'SUNDOWN': 'https://www.youtube.com/watch?v=N2-dqe8qweY',  
+
+};
+
+
 const wordle = 'DENVER'
+
 
 /**These are the keys*/
 const keys = [
@@ -195,7 +207,7 @@ const showMessage = (message) => {
     messageDisplay.append(messageElement )
     setTimeout(() => {
         messageDisplay.removeChild(messageElement)
-        window.location.replace("https://www.youtube.com/watch?v=vq4hRDnGbDY")
+        window.location.replace(songLookup[wordle])
     }, 5000 )
     
 }
