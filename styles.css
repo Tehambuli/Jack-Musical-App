@@ -32,7 +32,7 @@ body {
     text-align: center;
     width: 510px;
     background: rgb(63,251,207);
-    background: radial-gradient(circle, rgba(63,251,207,1) 0%, rgba(227,6,216,1) 100%); 
+    background: radial-gradient(circle, rgba(63,251,207,1) 0%, rgb(218, 128, 218) 100%); 
     
 }
 
@@ -110,7 +110,7 @@ body {
 
 .message-container p {
     background: rgb(63,251,207);
-    background: radial-gradient(circle, rgba(63,251,207,1) 0%, rgba(227,6,216,1) 100%); 
+    background: radial-gradient(circle, rgba(63,251,207,1) 0%, rgb(114, 85, 113) 100%); 
     border-radius: 10px;
     padding: 10px;
     margin: 0;
