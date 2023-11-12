@@ -109,6 +109,33 @@ body {
     margin: 0;
 }
 
+
+/**Tile for the flipping frame**/
+
+.tile.flip{
+    animation: 0.5s linear flipping;
+}
+
+/**Key frames flipping rotate**/
+
+    @keyframes flipping {
+
+    0%{
+        transform: rotate(0deg);
+    }
+    90%{
+        transform: rotate(90deg);
+    }
+     100%{
+        transform: rotate(0deg);
+    }
+
+    }
+
+
+
+
+
 /**Tile overlay color!**/
 
 .purple-overlay{
@@ -125,5 +152,6 @@ body {
     background-color: plum !important;
     border: none !important;
 }
+
 
 
