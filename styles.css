@@ -112,7 +112,7 @@ body {
     color:#fff;
     align-items: center;
     color: #ffffff;
-    text-shadow: 1px 1px #520573;
+    text-shadow: 1px 1px rgb(2, 109, 84);
     margin: 2px;
 }
 
@@ -125,10 +125,15 @@ body {
 
 .message-container p {
     background: rgb(63,251,207);
-    background: radial-gradient(circle, rgba(63,251,207,1) 0%, rgb(114, 85, 113) 100%); 
+    /*background: radial-gradient(circle, rgba(63,251,207,1) 0%, rgb(114, 85, 113) 100%);*/ 
     border-radius: 10px;
+    border: 2px solid #3bee89;
+    font-weight: bold;
+   color:#520573;
     padding: 10px;
-    margin: 0;
+    margin: 10px;
+    width:50%;
+    
 }
 .key-container
 
