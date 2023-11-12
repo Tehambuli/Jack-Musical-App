@@ -1,7 +1,8 @@
 
 
 * {
-    color: #ffffff;
+    color: #520573;
+    text-shadow: 1px 2px 12px #3bee89;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
 }
@@ -24,6 +25,7 @@ body {
     justify-content: space-between;
     align-items: center;
 
+
  
 }
 
@@ -37,11 +39,11 @@ body {
     /*background: rgb(63,251,207);
    background: radial-gradient(circle, rgba(63,251,207,1) 0%, rgb(218, 128, 218) 100%);*/
    background: radial-gradient(circle, rgba(63,251,207,1) 0%, rgb(218, 128, 218) 100%);
-  text-shadow: 2px 2px 2px #520573;
-      border-bottom: 5px solid #520573;
+  /*text-shadow: 2px 2px 2px #520573;*/
+      border-bottom: 2px solid rgba(227,6,216,1);
+     box-shadow: 1px 2px 5px #520573 ;
+
 }
-
-
 
 
 /*tile container 1*/
@@ -110,6 +112,7 @@ body {
     color:#fff;
     align-items: center;
     color: #ffffff;
+    text-shadow: 1px 1px #520573;
     margin: 2px;
 }
 
