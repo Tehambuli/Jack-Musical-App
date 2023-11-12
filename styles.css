@@ -121,6 +121,8 @@ body {
 
 .message-container{
     height: 30px;
+    margin-bottom: 50px;
+    width:50%;
 }
 
 .message-container p {
@@ -131,8 +133,7 @@ body {
     font-weight: bold;
    color:#520573;
     padding: 10px;
-    margin: 10px;
-    width:50%;
+    text-align: center;
     
 }
 .key-container
