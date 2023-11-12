@@ -47,9 +47,9 @@ const songLookup = {
     //'Heavy Hitter': 'https://www.youtube.com/watch?v=BeFbMwLSszI' 
     //'Thru the night': ' https://www.youtube.com/watch?v=wPrEkA_gQp4' 
     // 'Leaf Wraps' : 'https://www.youtube.com/watch?v=CsLR0kBny4w' 
-    //'POPPIN':   'https://www.youtube.com/watch?v=w9uWPBDHEKE' 
+    'POPPIN':   'https://www.youtube.com/watch?v=w9uWPBDHEKE' 
     // 'Tyler Hero':   'https://www.youtube.com/watch?v=np9Ub1LilKU'
-    //'Lovin on me': 'https://www.youtube.com/watch?v=Iq8h3GEe22o'
+    //'Lovin on me': 'https://www.youtube.com/watch?v=Iq8h3GEe22o
 
 };
 
@@ -58,7 +58,7 @@ const songLookup = {
   //}
 
 
-
+//wordle name//
 const wordle = 'POPPIN'
 
 
@@ -96,6 +96,8 @@ const keys = [
     '«',
 ]
 
+//guess rows columns//
+
 const guessRows =[
     ['', '', '', '', '', '', '',],
     ['', '', '', '', '', '', '',],
@@ -112,6 +114,7 @@ let currentRow = 0
 let currentTile = 0
 let isGameOver = false
 
+//guess row//
 
     guessRows.forEach((guessRow, guessRowIndex) => {
     const rowElement = document.createElement('div')
@@ -128,7 +131,7 @@ let isGameOver = false
 
 
    
-
+//Key Button//
 keys.forEach(key => {
    const buttonElement = document.createElement('button')
    buttonElement.textContent = key
@@ -139,6 +142,8 @@ keys.forEach(key => {
 
 })
 
+
+//handle click//
 
 
 const handleClick = (letter) => {
@@ -159,6 +164,8 @@ const handleClick = (letter) => {
 }
 
 
+//added letter//
+
 const addLetter = (letter) => {
     if (currentTile < 7  && currentRow < 8) {
     const tile = document.getElementById('guessRow-' + currentRow + '-tile-' + currentTile)
@@ -170,6 +177,9 @@ const addLetter = (letter) => {
     }
 
 }
+
+
+//delete letter//
 
 
 const deleteLetter =() =>   {
@@ -214,6 +224,8 @@ const checkRow = () => {
 
 }
 
+//message displaying //
+
 
 const showMessage = (message) => {
     const messageElement = document.createElement('p')
@@ -227,12 +239,15 @@ const showMessage = (message) => {
 }
 
 
+//flip tile//
+
 
 const flipTile = () => {
     const rowTiles = document.querySelector('#guessRow-' + currentRow).childNodes
     rowTiles.forEach((tile, index) => {
             const dataLetter = tile.getAttribute('data')
 
+//Timer//
 
     setTimeout(() => {
             if (dataLetter == wordle [index]) {
