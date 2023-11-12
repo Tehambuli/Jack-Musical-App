@@ -49,7 +49,7 @@ const songLookup = {
     //'Thru the night': ' https://www.youtube.com/watch?v=wPrEkA_gQp4' 
     // 'Leaf Wraps' : 'https://www.youtube.com/watch?v=CsLR0kBny4w' 
     'POPPIN':   'https://www.youtube.com/watch?v=w9uWPBDHEKE' 
-    // 'Tyler Hero':   'https://www.youtube.com/watch?v=np9Ub1LilKU'
+    // 'Tyler':   'https://www.youtube.com/watch?v=np9Ub1LilKU'
     //'Lovin on me': 'https://www.youtube.com/watch?v=Iq8h3GEe22o
 
 };

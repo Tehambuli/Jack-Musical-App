@@ -92,7 +92,7 @@ body {
     width: 72px ;
     height: 42px;
     background: rgb(63,251,207);
-    background: radial-gradient(circle, rgba(63,251,207,1) 0%, rgba(227,6,216,1) 100%); 
+    background: radial-gradient(circle, rgba(63,251,207,1) 0%, rgb(157, 45, 157) 100%); 
     box-sizing: border-box;
     display: flex;
     justify-content: center;
