@@ -248,6 +248,8 @@ const showMessage = (message) => {
 
 
 
+//tile stuff-color, flip, and set time per roatation//
+
 const addColorToKey = (keyLetter, color) => {
     const key = document.getElementById(keyLetter)
     key.classList.add(color)
