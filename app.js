@@ -38,8 +38,9 @@ const messageDisplay = document.querySelector('.message-container')
 
 
 const songLookup = {
+     // Add the rest of the songs in the same format
+
     //'DENVER': 'https://www.youtube.com/watch?v=vq4hRDnGbDY',
-    // Add the rest of the songs in the same format
     //'DRIP DROP': ' https://www.youtube.com/watch?v=4-SJyuCFD18',
     //'GHOST': 'https://www.youtube.com/watch?v=GByTR0pBYWE',
     //'SUNDOWN': 'https://www.youtube.com/watch?v=N2-dqe8qweY',  
@@ -239,7 +240,9 @@ const showMessage = (message) => {
 
 
  
-//NOTES FOR MONDAY   1. How to get the tiles to flip when the correct word is guessed. 2. Should words be single or double? How to put the app on my portfoiolo and connect it. Use I use Github?//
+//NOTES FOR MONDAY   1. Should words be single or double?// 
+//2.How to put the app on my portfoiolo and connect it. //
+//Use I use Github?//
 
 
 

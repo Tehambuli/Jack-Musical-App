@@ -10,7 +10,9 @@
 /*body container*/
 
 body {
-    background-color: #190482;
+    background: rgb(63,251,207);
+    background: radial-gradient(circle, rgba(63,251,207,1) 0%, rgba(227,6,216,1) 100%); 
+   
 }
 
 /*gamer container*/
@@ -29,7 +31,9 @@ body {
 .title-container {
     text-align: center;
     width: 510px;
-    border-bottom: solid 1px #5b2048;
+    background: rgb(63,251,207);
+    background: radial-gradient(circle, rgba(63,251,207,1) 0%, rgba(227,6,216,1) 100%); 
+    
 }
 
 
@@ -59,7 +63,8 @@ body {
     height: 58px;
     border-radius: 4px;
     border: none;
-    background-color: #9610a8;
+    background: rgb(63,251,207);
+    background: radial-gradient(circle, rgba(63,251,207,1) 0%, rgba(227,6,216,1) 100%); 
     margin: 4px;
 
 }
@@ -86,7 +91,8 @@ body {
 .tile-container .tile{
     width: 72px ;
     height: 42px;
-    border: 2px solid #9f05b0;
+    background: rgb(63,251,207);
+    background: radial-gradient(circle, rgba(63,251,207,1) 0%, rgba(227,6,216,1) 100%); 
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -103,7 +109,8 @@ body {
 }
 
 .message-container p {
-    background-color: #43063e;
+    background: rgb(63,251,207);
+    background: radial-gradient(circle, rgba(63,251,207,1) 0%, rgba(227,6,216,1) 100%); 
     border-radius: 10px;
     padding: 10px;
     margin: 0;
