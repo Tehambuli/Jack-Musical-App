@@ -10,3 +10,70 @@ I've have delete this again, because it is not working! I am going to start this
 This APP needs to done by the end of the week. I need to start working on revising my Python project for my personal portfolio!
 
 APP will be finished tomorrow and reviewed by mentor Jessamy!
+
+
+
+
+
+
+//message displaying //
+
+
+const showMessage = (message) => {
+    const messageElement = document.createElement('p')
+    messageElement.textContent = message
+    messageDisplay.append(messageElement )
+    setTimeout(() => {
+        messageDisplay.removeChild(messageElement)
+        window.location.replace(songLookup[wordle])
+    }, 5000 )
+    
+}
+
+
+
+//add color to key//
+
+const addColorToKey =(keyLetter, color) => {
+    const key = document.getElementById(keyLetter)
+    key.classList.add(color)
+
+}
+
+
+
+
+//flip tile//
+
+
+const flipTile = () => {
+    const rowTiles = document.querySelector('#guessRow-' + currentRow).childNodes
+    rowTiles.forEach((tile, index) => {
+            const dataLetter = tile.getAttribute('data')
+
+
+
+
+//add color to key//
+
+
+
+
+
+
+
+//Timer//
+
+    setTimeout(() => {
+            if (dataLetter == wordle [index]) {
+                tile.classList.add('plum-overlay')
+            }   else if (wordle.includes(dataLetter)) {
+            tile.classList.add('palevioletred-overlay')
+            }   else {
+                tile.classList.add('purple')
+            }
+
+        }, 500 * index)
+
+    })
+}

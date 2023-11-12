@@ -224,7 +224,6 @@ const checkRow = () => {
 
 }
 
-//message displaying //
 
 
 const showMessage = (message) => {
@@ -239,26 +238,44 @@ const showMessage = (message) => {
 }
 
 
-//flip tile//
+ 
+//NOTES FOR MONDAY   1. How to get the tiles to flip when the correct word is guessed. 2. Should words be single or double? How to put the app on my portfoiolo and connect it. Use I use Github?//
 
+
+
+const addColorToKey = (keyLetter, color) => {
+    const key = document.getElementById(keyLetter)
+    key.classList.add(color)
+}
 
 const flipTile = () => {
     const rowTiles = document.querySelector('#guessRow-' + currentRow).childNodes
+    let checkWordle = wordle
+    const guess = []
+
+    rowTiles.forEach(tile => {
+        guess.push({letter: tile.getAttribute('data'), color: 'grey-overlay'})
+    })
+
+    guess.forEach((guess, index) => {
+        if (guess.letter == wordle[index]) {
+            guess.color = 'green-overlay'
+            checkWordle = checkWordle.replace(guess.letter, '')
+        }
+    })
+
+    guess.forEach(guess => {
+        if (checkWordle.includes(guess.letter)) {
+            guess.color = 'yellow-overlay'
+            checkWordle = checkWordle.replace(guess.letter, '')
+        }
+    })
+
     rowTiles.forEach((tile, index) => {
-            const dataLetter = tile.getAttribute('data')
-
-//Timer//
-
-    setTimeout(() => {
-            if (dataLetter == wordle [index]) {
-                tile.classList.add('plum-overlay')
-            }   else if (wordle.includes(dataLetter)) {
-            tile.classList.add('palevioletred-overlay')
-            }   else {
-                tile.classList.add('purple')
-            }
-
+        setTimeout(() => {
+            tile.classList.add('flip')
+            tile.classList.add(guess[index].color)
+            addColorToKey(guess[index].letter, guess[index].color)
         }, 500 * index)
-
     })
 }
