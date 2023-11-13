@@ -7,17 +7,17 @@ Not sure how to add the youtube videol links!
 I have cleaned out the code and I am restarting becasue I am too fucking dumb to get this right the first timne..,.I'M STARTING ALL OVET AGAIN! THE CODE HAS BEEN DELETED!
 I've have delete this again, because it is not working! I am going to start this code again!
 
-This APP needs to done by the end of the week. I need to start working on revising my Python project for my personal portfolio!
+1. This APP needs to done by the end of the week. I need to start working on revising my Python project for my personal portfolio!
 
-APP will be finished tomorrow and reviewed by mentor Jessamy!
+2. APP will be finished tomorrow and reviewed by mentor Jessamy!
 
-Questions to ask:  Can we make the youtube videos into Iframe. It will easier to do a modal and embed the video right there. Can also close and go right back to APP
+3. Questions to ask:  Can we make the youtube videos into Iframe. It will easier to do a modal and embed the video right there. Can also close and go right back to APP
 
-Splash page with title brief description and button to enter
+4. Splash page with title brief description and button to enter
 
-Adding a photo of Jack on splash page, fade opacity of pic
+5. Adding a photo of Jack on splash page, fade opacity of pic
 
-JS transition between correct answer and video
+6. JS transition between correct answer and video
                    
 
 
