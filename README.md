@@ -11,7 +11,9 @@ This APP needs to done by the end of the week. I need to start working on revisi
 
 APP will be finished tomorrow and reviewed by mentor Jessamy!
 
-
+Questions to ask:  Can we make the youtube videos into Iframe, so it will open up to the video directly? 
+                   I would like to make a fun transition screen. 
+                   
 
 
 

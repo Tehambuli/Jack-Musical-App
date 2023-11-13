@@ -41,16 +41,15 @@ const songLookup = {
      // Add the rest of the songs in the same format
 
     //'DENVER': 'https://www.youtube.com/watch?v=vq4hRDnGbDY',
-    'DRIP': ' https://www.youtube.com/watch?v=4-SJyuCFD18',
+    //'DRIP': ' https://www.youtube.com/watch?v=4-SJyuCFD18',
     //'GHOST': 'https://www.youtube.com/watch?v=GByTR0pBYWE',
     //'SUNDOWN': 'https://www.youtube.com/watch?v=N2-dqe8qweY',  
-    //'ALREADY FRIENDS': 'https://www.youtube.com/watch?v=BeFbMwLSszI',
-    //'Heavy Hitter': 'https://www.youtube.com/watch?v=BeFbMwLSszI' 
-    //'Thru the night': ' https://www.youtube.com/watch?v=wPrEkA_gQp4' 
-    // 'Leaf Wraps' : 'https://www.youtube.com/watch?v=CsLR0kBny4w' 
+    //'FRIENDS': 'https://www.youtube.com/watch?v=kM-4va2nuYg',
+    //'HEAVY': 'https://www.youtube.com/watch?v=BeFbMwLSszI' 
+    //'NIGHT': ' https://www.youtube.com/watch?v=wPrEkA_gQp4' 
     //'POPPIN':   'https://www.youtube.com/watch?v=w9uWPBDHEKE' 
-    // 'Tyler':   'https://www.youtube.com/watch?v=np9Ub1LilKU'
-    //'Lovin on me': 'https://www.youtube.com/watch?v=Iq8h3GEe22o
+    // 'TYLER':   'https://www.youtube.com/watch?v=np9Ub1LilKU'
+    'LOVIN': 'https://www.youtube.com/watch?v=Iq8h3GEe22o'
 
 };
 
@@ -60,7 +59,7 @@ const songLookup = {
 
 
 //wordle name//
-const wordle = 'DRIP'
+const wordle = 'LOVIN'
 
 
 
@@ -237,15 +236,6 @@ const showMessage = (message) => {
     }, 5000 )
     
 }
-
-
-
-
- 
-//NOTES FOR MONDAY   1. Should words be single or double?// 
-//2.How to put the app on my portfoiolo and connect it. //
-//Use I use Github?//
-
 
 
 //tile stuff-color, flip, and set time per roatation//
