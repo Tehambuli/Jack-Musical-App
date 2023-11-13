@@ -11,11 +11,15 @@ This APP needs to done by the end of the week. I need to start working on revisi
 
 APP will be finished tomorrow and reviewed by mentor Jessamy!
 
-Questions to ask:  Can we make the youtube videos into Iframe, so it will open up to the video directly? 
-                   I would like to make a fun transition screen. 
+Questions to ask:  Can we make the youtube videos into Iframe. It will easier to do a modal and embed the video right there. Can also close and go right back to APP
 
+Splash page with title brief description and button to enter
 
-Added intro app page and needs to be connected to the APP with a fun transition
+Adding a photo of Jack on splash page, fade opacity of pic
+
+JS transition between correct answer and video
+                   
+
 
 
 
