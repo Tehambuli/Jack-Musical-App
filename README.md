@@ -13,7 +13,9 @@ APP will be finished tomorrow and reviewed by mentor Jessamy!
 
 Questions to ask:  Can we make the youtube videos into Iframe, so it will open up to the video directly? 
                    I would like to make a fun transition screen. 
-                   
+
+
+Added intro app page and needs to be connected to the APP with a fun transition
 
 
 
