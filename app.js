@@ -40,28 +40,34 @@ const messageDisplay = document.querySelector('.message-container')
 const songLookup = {
      // Add the rest of the songs in the same format
 
-    //'DENVER': 'https://www.youtube.com/watch?v=vq4hRDnGbDY',
-    //'DRIP': ' https://www.youtube.com/watch?v=4-SJyuCFD18',
-    //'GHOST': 'https://www.youtube.com/watch?v=GByTR0pBYWE',
-    //'SUNDOWN': 'https://www.youtube.com/watch?v=N2-dqe8qweY',  
-    //'FRIENDS': 'https://www.youtube.com/watch?v=kM-4va2nuYg',
-    //'HEAVY': 'https://www.youtube.com/watch?v=BeFbMwLSszI' 
-    //'NIGHT': ' https://www.youtube.com/watch?v=wPrEkA_gQp4' 
-    //'POPPIN':   'https://www.youtube.com/watch?v=w9uWPBDHEKE' 
-    // 'TYLER':   'https://www.youtube.com/watch?v=np9Ub1LilKU'
-    'LOVIN': 'https://www.youtube.com/watch?v=Iq8h3GEe22o'
+    'DENVER': 'https://www.youtube.com/watch?v=vq4hRDnGbDY',
+    'DRIP': ' https://www.youtube.com/watch?v=4-SJyuCFD18',
+    'GHOST': 'https://www.youtube.com/watch?v=GByTR0pBYWE',
+    'SUNDOWN': 'https://www.youtube.com/watch?v=N2-dqe8qweY',  
+    'FRIENDS': 'https://www.youtube.com/watch?v=kM-4va2nuYg',
+    'HEAVY': 'https://www.youtube.com/watch?v=BeFbMwLSszI', 
+    'NIGHT': ' https://www.youtube.com/watch?v=wPrEkA_gQp4', 
+    'POPPIN':   'https://www.youtube.com/watch?v=w9uWPBDHEKE', 
+    'TYLER':   'https://www.youtube.com/watch?v=np9Ub1LilKU',
+    'LOVIN': 'https://www.youtube.com/watch?v=Iq8h3GEe22o',
 
 };
 
-//function randomIntFromInterval(min, max) { // min and max included 
-   // return Math.floor(Math.random() * (max - min + 1) + min)
-  //}
+function randomIntFromInterval(min, max) { // min and max included 
+ return Math.floor(Math.random() * (max - min + 1) + min)
+}
 
+var names = Object.keys(songLookup)
+
+var randomIndex = randomIntFromInterval(0, names.length-1)
+var wordle = names[randomIndex]
 
 //wordle name//
-const wordle = 'LOVIN'
+//const wordle = 'LOVIN'
 
-
+console.log(
+    names,randomIndex,wordle
+)
 
 
 /**These are the keys*/
@@ -272,7 +278,12 @@ const flipTile = () => {
         setTimeout(() => {
             tile.classList.add('flip')
             tile.classList.add(guess[index].color)
+        console.log(
+            "foreach",tile,index,guess
+        )
+            if(guess[index].letter)
             addColorToKey(guess[index].letter, guess[index].color)
+        
         }, 500 * index)
     })
 }
