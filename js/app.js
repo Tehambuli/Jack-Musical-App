@@ -3,9 +3,6 @@ const keyboard = document.querySelector('.key-container')
 const messageDisplay = document.querySelector('.message-container')
 
 
-
-
-
 /**Jack Harlow's Songs and video links for APP
  * 
  * 1. "Denver" https://www.youtube.com/watch?v=vq4hRDnGbDY 
@@ -34,30 +31,13 @@ const messageDisplay = document.querySelector('.message-container')
  * 
  */
 
-
-
-
-const songLookup = {
-     // Add the rest of the songs in the same format
-
-    'DENVER': 'https://www.youtube.com/watch?v=vq4hRDnGbDY',
-    'DRIP': ' https://www.youtube.com/watch?v=4-SJyuCFD18',
-    'GHOST': 'https://www.youtube.com/watch?v=GByTR0pBYWE',
-    'SUNDOWN': 'https://www.youtube.com/watch?v=N2-dqe8qweY',  
-    'FRIENDS': 'https://www.youtube.com/watch?v=kM-4va2nuYg',
-    'HEAVY': 'https://www.youtube.com/watch?v=BeFbMwLSszI', 
-    'NIGHT': ' https://www.youtube.com/watch?v=wPrEkA_gQp4', 
-    'POPPIN':   'https://www.youtube.com/watch?v=w9uWPBDHEKE', 
-    'TYLER':   'https://www.youtube.com/watch?v=np9Ub1LilKU',
-    'LOVIN': 'https://www.youtube.com/watch?v=Iq8h3GEe22o',
-
-};
+const names = Object.keys(songLookup)
+const longestName = names.reduce((longest, name) => Math.max(longest, name.length), 0)
+const guessRows = [...Array(7)].map(() => [...Array(longestName)])
 
 function randomIntFromInterval(min, max) { // min and max included 
  return Math.floor(Math.random() * (max - min + 1) + min)
 }
-
-var names = Object.keys(songLookup)
 
 var randomIndex = randomIntFromInterval(0, names.length-1)
 var wordle = names[randomIndex]
@@ -69,62 +49,16 @@ console.log(
     names,randomIndex,wordle
 )
 
-
-/**These are the keys*/
-const keys = [
-    'Q',
-    'W',
-    'E',
-    'R',
-    'T',
-    'Y',
-    'U',
-    'I',
-    'O',
-    'P',
-    'A',
-    'S',
-    'D',
-    'F',
-    'G',
-    'H',
-    'J',
-    'K',
-    'L',
-    'ENTER',
-    'Z',
-    'X',
-    'C',
-    'V',
-    'B',
-    'N',
-    'M',
-    '«',
-]
-
-//guess rows columns//
-
-const guessRows =[
-    ['', '', '', '', '', '', '',],
-    ['', '', '', '', '', '', '',],
-    ['', '', '', '', '', '', '',],
-    ['', '', '', '', '', '', '',],
-    ['', '', '', '', '', '', '',],
-    ['', '', '', '', '', '', '',],
-    ['', '', '', '', '', '', '',]
-
-
-]
-
 let currentRow = 0
 let currentTile = 0
 let isGameOver = false
 
 //guess row//
 
-    guessRows.forEach((guessRow, guessRowIndex) => {
+guessRows.forEach((guessRow, guessRowIndex) => {
     const rowElement = document.createElement('div')
     rowElement.setAttribute('id', 'guessRow-' + guessRowIndex)
+    
     guessRow.forEach((guess, guessIndex) =>  {
         const tileElement = document.createElement('div')
         tileElement.setAttribute('id', 'guessRow-' + guessRowIndex + '-tile-' + guessIndex)
@@ -135,8 +69,6 @@ let isGameOver = false
     tileDisplay.append(rowElement)
 })
 
-
-   
 //Key Button//
 keys.forEach(key => {
    const buttonElement = document.createElement('button')
@@ -144,14 +76,9 @@ keys.forEach(key => {
    buttonElement.setAttribute('id', key)
    buttonElement.addEventListener('click',  () => handleClick(key))
    keyboard.append(buttonElement)
-
-
 })
 
-
 //handle click//
-
-
 const handleClick = (letter) => {
     console.log( 'clicked', letter)
     if (letter === '«'){
@@ -174,20 +101,15 @@ const handleClick = (letter) => {
 
 const addLetter = (letter) => {
     if (currentTile < 7  && currentRow < 8) {
-    const tile = document.getElementById('guessRow-' + currentRow + '-tile-' + currentTile)
-    tile.textContent = letter
-    guessRows[currentRow][currentTile] = letter
-    tile.setAttribute('data', letter)
-    currentTile++
-
+        const tile = document.getElementById('guessRow-' + currentRow + '-tile-' + currentTile)
+        tile.textContent = letter
+        guessRows[currentRow][currentTile] = letter
+        tile.setAttribute('data', letter)
+        currentTile++
     }
-
 }
 
-
 //delete letter//
-
-
 const deleteLetter =() =>   {
     if (currentTile > 0 ) {
         currentTile--
@@ -195,54 +117,44 @@ const deleteLetter =() =>   {
         tile.textContent = ''
         guessRows[currentRow][currentTile] = ''
         tile.setAttribute('data', '')
-
     }
-   
 }
-
 
 const checkRow = () => {
     const guess = guessRows[currentRow].join('')
 
- /*
-    if (currentTile === 7){*/
-        
-        console.log('guess is ' + guess, 'wordle  is '+ wordle)
-        flipTile()
-        if (wordle == guess){
-            showMessage ('Magnificent!')
-            isGameOver = true
-            return
-        } else{
-            if(currentRow >= 7){
-                isGameOver = false
-                showMessage('Game Over')
-                return
-            }
+    console.log('guess is ' + guess, 'wordle  is '+ wordle)
+    
+    flipTile()
 
-            if (currentRow < 7) {
-                currentRow++
-                currentTile = 0
-            }
+    if (songLookup[guess]) {
+        showMessage('Magnificent!')
+        isGameOver = true
+        return
+    }
 
-        }
-    // }
+    if (currentRow >= 7) {
+        isGameOver = false
+        showMessage('Game Over')
+        return
+    }
 
+    if (currentRow < 7) {
+        currentRow++
+        currentTile = 0
+    }
 }
-
-
 
 const showMessage = (message) => {
     const messageElement = document.createElement('p')
     messageElement.textContent = message
-    messageDisplay.append(messageElement )
+    messageDisplay.append(messageElement)
+
     setTimeout(() => {
         messageDisplay.removeChild(messageElement)
-        window.location.replace(songLookup[wordle])
-    }, 5000 )
-    
+        window.open(songLookup[wordle], '_blank')
+    }, 3000)
 }
-
 
 //tile stuff-color, flip, and set time per roatation//
 
@@ -257,7 +169,7 @@ const flipTile = () => {
     const guess = []
 
     rowTiles.forEach(tile => {
-        guess.push({letter: tile.getAttribute('data'), color: 'grey-overlay'})
+        guess.push({ letter: tile.getAttribute('data'), color: 'grey-overlay' })
     })
 
     guess.forEach((guess, index) => {
@@ -275,15 +187,14 @@ const flipTile = () => {
     })
 
     rowTiles.forEach((tile, index) => {
-        setTimeout(() => {
-            tile.classList.add('flip')
-            tile.classList.add(guess[index].color)
+        // setTimeout(() => {
+        tile.classList.add('flip')
+        tile.classList.add(guess[index].color)
         console.log(
             "foreach",tile,index,guess
         )
-            if(guess[index].letter)
+        if(guess[index].letter) {
             addColorToKey(guess[index].letter, guess[index].color)
-        
-        }, 500 * index)
+        }
     })
 }
