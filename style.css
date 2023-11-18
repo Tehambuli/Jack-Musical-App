@@ -1,0 +1,84 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+    /*background: rgb(63,251,207);
+    background: radial-gradient(circle, rgba(63,251,207,1) 0%, rgba(227,6,216,1) 100%); 
+  margin: 0px;*/
+	padding: 0;
+	margin:0;
+		background-image: url("images/Jack-Harlow-Image-2022.jpg");
+	background-color: #0A0A0A;
+	background-repeat: no-repeat;
+	background-position: right;
+
+	background-attachment: fixed;
+  background-size: contain;
+}
+
+.intro{
+  text-align: center;
+	position: fixed;
+}
+
+.instructions{
+	/*Padding: 40px 40px 40px 50px;*/
+	padding: 5em 5em 10em 5em;
+	color: #fff;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	font-size: 1.25em;
+	width: 100%;
+	height: 100%;
+	/*background-color: rgba(0, 0, 0, 0.4);*/
+	
+}
+a:link { text-decoration: none; }
+
+a:visited { text-decoration: none; }
+
+a:hover { text-decoration: none; }
+
+a:active { text-decoration: none; }
+.button{
+    background: radial-gradient(circle, rgba(63,251,207,1) 0%, rgba(227,6,216,1) 100%);
+    border: 1px solid #36026A;
+	box-shadow: 1px 1px 5px rgba(220,3,200,1);
+	color: #36026A;
+	text-shadow: 1px 1px 1px #000;
+    width: auto;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 26px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+  }
+  
+  .button {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+.header {
+	Width:100%;
+	background-color: #000;
+	Padding:10px;
+	border-bottom: 4px solid rgba(227, 6, 216, 1);		
+}
+.h1font{
+	color: rgba(227, 6, 216, 1);
+	font-size: 3em;
+	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
+	text-align: center;
+}
+.footer {
+	Width:100%;
+	background-color: #000;
+	border-top: 4px solid rgba(227, 6, 216, 1);		
+	Padding: 10px 40px 40px 50px;
+	color: #fff;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	font-size: .7em;
+	position: fixed;
+  left: 0;
+  bottom: 0;
+	text-align: center;
+}
