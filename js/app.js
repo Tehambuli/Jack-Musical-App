@@ -39,8 +39,8 @@ function randomIntFromInterval(min, max) { // min and max included
  return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
-var randomIndex = randomIntFromInterval(0, names.length-1)
-var wordle = names[randomIndex]
+const randomIndex = randomIntFromInterval(0, names.length-1)
+let wordle = names[randomIndex]
 
 //wordle name//
 //const wordle = 'LOVIN'
@@ -121,17 +121,11 @@ const deleteLetter =() =>   {
 }
 
 const checkRow = () => {
-    const guess = guessRows[currentRow].join('')
+    wordle = guessRows[currentRow].join('')
 
-    console.log('guess is ' + guess, 'wordle  is '+ wordle)
+    console.log('guess is ' + wordle, 'wordle  is '+ wordle)
     
     flipTile()
-
-    if (songLookup[guess]) {
-        showMessage('Magnificent!')
-        isGameOver = true
-        return
-    }
 
     if (currentRow >= 7) {
         isGameOver = false
@@ -139,10 +133,16 @@ const checkRow = () => {
         return
     }
 
+    if (songLookup[wordle]) {
+        showMessage('Magnificent!')
+        isGameOver = true
+    }
+
     if (currentRow < 7) {
-        currentRow++
         currentTile = 0
     }
+
+    currentRow++
 }
 
 const showMessage = (message) => {
@@ -151,6 +151,7 @@ const showMessage = (message) => {
     messageDisplay.append(messageElement)
 
     setTimeout(() => {
+        console.log('Opening video for', wordle, songLookup[wordle])
         messageDisplay.removeChild(messageElement)
         window.open(songLookup[wordle], '_blank')
     }, 3000)

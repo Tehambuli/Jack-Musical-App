@@ -1,19 +1,17 @@
-
-
 * {
     color: #520573;
     text-shadow: 1px 2px 12px #3bee89;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
+        'Lucida Sans', Arial, sans-serif;
 }
 
 
 /*body container*/
 
 body {
-    background: rgb(63,251,207);
-    background: radial-gradient(circle, rgba(63,251,207,1) 0%, rgba(227,6,216,1) 100%); 
-  margin: 0px;
+    background: rgb(63, 251, 207);
+    background: radial-gradient(circle, rgba(63, 251, 207, 1) 0%, rgba(227, 6, 216, 1) 100%);
+    margin: 0px;
 }
 
 /*gamer container*/
@@ -24,9 +22,6 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-
-
- 
 }
 
 /*title container*/
@@ -38,10 +33,10 @@ body {
     width: 100%;
     /*background: rgb(63,251,207);
    background: radial-gradient(circle, rgba(63,251,207,1) 0%, rgb(218, 128, 218) 100%);*/
-   background: radial-gradient(circle, rgba(63,251,207,1) 0%, rgb(218, 128, 218) 100%);
-  /*text-shadow: 2px 2px 2px #520573;*/
-      border-bottom: 2px solid rgba(227,6,216,1);
-     box-shadow: 1px 2px 5px #520573 ;
+    background: radial-gradient(circle, rgba(63, 251, 207, 1) 0%, rgb(218, 128, 218) 100%);
+    /*text-shadow: 2px 2px 2px #520573;*/
+    border-bottom: 2px solid rgba(227, 6, 216, 1);
+    box-shadow: 1px 2px 5px #520573;
 
 }
 
@@ -57,34 +52,27 @@ body {
 /*key container*/
 
 .key-container {
-    width: 510px;
     display: flex;
     flex-wrap: wrap;
 }
 
-
 /*Key Container*/
 
 .key-container button {
-    width: 43px;
-    height: 58px;
     border-radius: 4px;
     border: none;
-    background: rgb(63,251,207);
-   /* background: radial-gradient(circle, rgba(63,251,207,1) 0%, rgb(158, 103, 156) 100%); 
+    background: rgb(63, 251, 207);
+    /* background: radial-gradient(circle, rgba(63,251,207,1) 0%, rgb(158, 103, 156) 100%); 
    */
-   border:1px solid rgb(3, 136, 105);
-   box-shadow:2px 2px 4px rgb(3, 136, 105);
+    border: 1px solid rgb(3, 136, 105);
+    box-shadow: 2px 2px 4px rgb(3, 136, 105);
     margin: 4px;
-   /* text-shadow:1px 2px 2px #000;
+    /* text-shadow:1px 2px 2px #000;
     */
-    color:rgb(2, 109, 84);
+    color: rgb(2, 109, 84);
     font-weight: bold;
 }
 
-.key-container button:nth-child(11){
-    margin-left: 30px;
-}
 
 .key-container button:nth-child(20),
 .key-container button:nth-child(28) {
@@ -95,13 +83,13 @@ body {
 /*tile container 2*/
 
 
-.tile-container div{
+.tile-container div {
     display: flex;
 }
 
 
-.tile-container .tile{
-    width: 72px ;
+.tile-container .tile {
+    flex-grow: 1;
     height: 42px;
     background: rgb(157, 45, 157);
     /*background: radial-gradient(circle, rgba(63,251,207,1) 0%, rgb(157, 45, 157) 100%); */
@@ -109,7 +97,7 @@ body {
     border: 1px solid rgb(87, 12, 87);
     display: flex;
     justify-content: center;
-    color:#fff;
+    color: #fff;
     align-items: center;
     color: #ffffff;
     text-shadow: 1px 1px rgb(2, 109, 84);
@@ -119,67 +107,75 @@ body {
 
 /*P tag container*/
 
-.message-container{
+.message-container {
     height: 30px;
     margin-bottom: 50px;
-    width:50%;
+    width: 50%;
 }
 
 .message-container p {
-    background: rgb(63,251,207);
-    /*background: radial-gradient(circle, rgba(63,251,207,1) 0%, rgb(114, 85, 113) 100%);*/ 
+    background: rgb(63, 251, 207);
+    /*background: radial-gradient(circle, rgba(63,251,207,1) 0%, rgb(114, 85, 113) 100%);*/
     border-radius: 10px;
     border: 2px solid #3bee89;
     font-weight: bold;
-   color:#520573;
+    color: #520573;
     padding: 10px;
     text-align: center;
-    
-}
-.key-container
 
+}
+
+.key-container
 /**Tile for the flipping frame**/
 
-.tile.flip{
+.tile.flip {
     animation: 0.5s linear flipping;
 }
 
 /**Key frames flipping rotate**/
 
-    @keyframes flipping {
+@keyframes flipping {
 
-    0%{
+    0% {
         transform: rotate(0deg);
     }
-    90%{
+
+    90% {
         transform: rotate(90deg);
     }
-     100%{
+
+    100% {
         transform: rotate(0deg);
     }
 
-    }
-
-
-
-
+}
 
 /**Tile overlay color!**/
 
-.purple-overlay{
+.purple-overlay {
     background-color: purple !important;
     border: none !important;
 }
 
-.palevioletred-overlay{
+.palevioletred-overlay {
     background-color: palevioletred !important;
     border: none !important;
 }
 
-.plum-overlay{
+.plum-overlay {
     background-color: plum !important;
     border: none !important;
 }
 
-
-
+@media (min-width: 580px) {
+    .key-container {
+        width: 510px;
+    }
+    .key-container button {
+        width: 43px;
+        height: 58px;
+    }
+    .key-container button:nth-child(11){
+        margin-left: 30px;
+    }
+}
