@@ -12,7 +12,7 @@ body{
 	background-position: right;
 
 	background-attachment: fixed;
-  background-size: contain;
+  background-size:auto;
 }
 
 .intro{
@@ -22,7 +22,7 @@ body{
 
 .instructions{
 	/*Padding: 40px 40px 40px 50px;*/
-	padding: 5em 5em 10em 5em;
+	padding: 2em 5em 10em 2em;
 	color: #fff;
 	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
 	font-size: 1.25em;
